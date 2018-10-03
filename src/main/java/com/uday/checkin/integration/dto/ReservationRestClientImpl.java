@@ -7,7 +7,7 @@ import org.springframework.web.client.RestTemplate;
 @Component
 public class ReservationRestClientImpl implements ReservationRestClient {
 
-    private static final String RESERVATION_REST_URL="localhost:8080/getReservation/";
+    private static final String RESERVATION_REST_URL="http://localhost:8080/getReservation/";
 
     @Override
     public Reservation findReservation(Long id) {
@@ -20,7 +20,7 @@ public class ReservationRestClientImpl implements ReservationRestClient {
     @Override
     public Reservation updateReservation(ReservationRequest request) {
          RestTemplate restTemplate=new RestTemplate();
-         Reservation reservation=restTemplate.postForObject("localhost:8080/updateReservation",
+         Reservation reservation=restTemplate.postForObject("http://localhost:8080/updateReservation",
                  request,Reservation.class);
         return reservation;
     }

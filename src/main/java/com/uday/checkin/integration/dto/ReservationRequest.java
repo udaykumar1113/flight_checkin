@@ -1,100 +1,40 @@
 package com.uday.checkin.integration.dto;
 
 public class ReservationRequest {
-    private String passengerFirstName;
-    private String passengerLastName;
-    private String passengerEmail;
-    private String passengerPhone;
-    private String nameOnTheCard;
-    private String cardNumber;
-    private String expirationDate;
-    private String securityCode;
-    private Long flightId;
+    private Long id;
+    private Boolean checkedIn;
+    private int numberOfBags;
 
-    public String getPassengerFirstName() {
-        return passengerFirstName;
+    public Long getId() {
+        return id;
     }
 
-    public void setPassengerFirstName(String passengerFirstName) {
-        this.passengerFirstName = passengerFirstName;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String getPassengerLastName() {
-        return passengerLastName;
+    public Boolean getCheckedIn() {
+        return checkedIn;
     }
 
-    public void setPassengerLastName(String passengerLastName) {
-        this.passengerLastName = passengerLastName;
+    public void setCheckedIn(Boolean checkedIn) {
+        this.checkedIn = checkedIn;
     }
 
-    public String getPassengerEmail() {
-        return passengerEmail;
+    public int getNumberOfBags() {
+        return numberOfBags;
     }
 
-    public void setPassengerEmail(String passengerEmail) {
-        this.passengerEmail = passengerEmail;
-    }
-
-    public String getPassengerPhone() {
-        return passengerPhone;
-    }
-
-    public void setPassengerPhone(String passengerPhone) {
-        this.passengerPhone = passengerPhone;
-    }
-
-    public String getNameOnTheCard() {
-        return nameOnTheCard;
-    }
-
-    public void setNameOnTheCard(String nameOnTheCard) {
-        this.nameOnTheCard = nameOnTheCard;
-    }
-
-    public String getCardNumber() {
-        return cardNumber;
-    }
-
-    public void setCardNumber(String cardNumber) {
-        this.cardNumber = cardNumber;
-    }
-
-    public String getExpirationDate() {
-        return expirationDate;
-    }
-
-    public void setExpirationDate(String expirationDate) {
-        this.expirationDate = expirationDate;
-    }
-
-    public String getSecurityCode() {
-        return securityCode;
-    }
-
-    public void setSecurityCode(String securityCode) {
-        this.securityCode = securityCode;
-    }
-
-    public Long getFlightId() {
-        return flightId;
-    }
-
-    public void setFlightId(Long flightId) {
-        this.flightId = flightId;
+    public void setNumberOfBags(int numberOfBags) {
+        this.numberOfBags = numberOfBags;
     }
 
     @Override
     public String toString() {
         return "ReservationRequest{" +
-                "passengerFirstName='" + passengerFirstName + '\'' +
-                ", passengerLastName='" + passengerLastName + '\'' +
-                ", passengerEmail='" + passengerEmail + '\'' +
-                ", passengerPhone='" + passengerPhone + '\'' +
-                ", nameOnTheCard='" + nameOnTheCard + '\'' +
-                ", cardNumber='" + cardNumber + '\'' +
-                ", expirationDate='" + expirationDate + '\'' +
-                ", securityCode='" + securityCode + '\'' +
-                ", flightId='" + flightId + '\'' +
+                "id=" + id +
+                ", checkedIn=" + checkedIn +
+                ", numberOfBags=" + numberOfBags +
                 '}';
     }
 }

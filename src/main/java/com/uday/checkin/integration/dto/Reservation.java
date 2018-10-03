@@ -4,6 +4,14 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 public class Reservation {
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     private Long id;
     private Boolean checkedIn;
     private int numberOfBags;
