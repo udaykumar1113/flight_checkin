@@ -19,7 +19,7 @@ Arrival City: <span th:text="${reservation.flight.arrivalCity}"></span><br>
 Departure Time:<span th:text="${reservation.flight.estimatedDepartureTime}"></span><br>
 Departure Date: <span th:text="${reservation.flight.dateOfDeparture}"></span><br><br><br>
 
-<form action="">
+<form th:action="updateCheckIn" method="post">
     Enter number of bags:   <input type="text" name="numberOfBags"/><br><br>
     <input type="hidden" name="id" th:value="${reservation.id}"/><br>
     <input type="hidden" name="checkedIn" th:value="true"/>
